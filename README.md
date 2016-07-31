@@ -46,7 +46,7 @@ OCGStack *stack = [[OCGStack alloc] init];
 **Swap the two elements at the top of your stack**
 
 ```
-[stack popObject];
+[stack swapTopMostObjects];
 ```
 
 **Check if your stack is empty**
