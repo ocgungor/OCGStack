@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OCGStack.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        OCGStack *stack = [OCGStack stackWithObjects:@"ocg", @"booka", nil];
+        [stack pushObject:@"hello"];
+        [stack pushObject:@"there"];
+
+        NSLog(@"%@", [stack peekObject]);
+        NSLog(@"%@", [stack popObject]);
+        NSLog(@"%@", stack);
+        [stack swapTopMostObjects];
+        NSLog(@"%@", stack);
     }
     return 0;
 }

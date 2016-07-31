@@ -88,4 +88,11 @@
     return self.elements.count == 0;
 }
 
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+    [description appendFormat:@"stack.elements=%@", self.elements];
+    [description appendString:@">"];
+    return description;
+}
+
 @end
